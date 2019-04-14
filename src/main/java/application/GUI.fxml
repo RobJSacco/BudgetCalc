@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="362.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalcGuiController">
+   <children>
+      <AnchorPane id="Salary" layoutX="14.0" layoutY="20.0" prefHeight="38.0" prefWidth="177.0">
+         <children>
+            <TextField fx:id="salaryFxml" layoutX="49.0" layoutY="2.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="68.0" promptText="Salary" />
+         	  <Label layoutY="6.0" prefHeight="17.0" prefWidth="49.0" text="Salary:" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="76.0">
+         <children>      
+            <Label layoutY="4.0" text="Rent" />
+            <TextField fx:id="rentFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Rent" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="110.0">
+         <children>
+            <Label layoutY="4.0" text="Food:" />
+            <TextField fx:id="foodFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Food" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="147.0">
+         <children>
+            <Label layoutY="4.0" text="Utils:" />
+            <TextField fx:id="utilsFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Utilities" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
