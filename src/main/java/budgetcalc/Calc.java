@@ -26,6 +26,8 @@ public class Calc {
    * @return
    */
   public static String numericToFinancial(String string, Boolean withCents) {
+    //FIXME unexpected results when withCents = true
+    //Seems to multiply by 12 instead of divide by 12.
     String numeric = "";
     for (int i = 0; i < string.length(); i++) {
       if (StringUtils.isNumeric(string.substring(i,i + 1))) {

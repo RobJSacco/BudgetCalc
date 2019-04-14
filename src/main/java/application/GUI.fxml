@@ -30,5 +30,51 @@
             <TextField fx:id="utilsFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Utilities" />
          </children>
       </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="181.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Car:" />
+            <TextField fx:id="transportFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Transport" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="215.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Fun:" />
+            <TextField fx:id="funFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Fun" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="249.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Debt:" />
+            <TextField fx:id="debtFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Debt" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="283.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Save:" />
+            <TextField fx:id="savingsFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Savings" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="142.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutY="4.0" prefHeight="17.0" prefWidth="75.0" text="Income:" textAlignment="RIGHT" />
+                  <Label fx:id="incomeFxml" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Expenses:" />
+                  <Label fx:id="expensesFxml" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="64.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Net :" textAlignment="RIGHT" />
+                  <Label fx:id="netFxml" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

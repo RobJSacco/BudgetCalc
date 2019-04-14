@@ -10,6 +10,9 @@ public class BudgetItem {
   private final int monthsPerYear = 12;
   private final int biWeeksPerYear = 26;
 
+  public void setExpense(double Expense) {    
+    this.yearlyExpense = Expense;     
+  }
   public double getYearlyExpense() {
     return yearlyExpense;
   }
