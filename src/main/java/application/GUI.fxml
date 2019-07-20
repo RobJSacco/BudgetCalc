@@ -14,14 +14,14 @@
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="76.0">
          <children>      
-            <Label layoutY="4.0" text="Rent" />
-            <TextField fx:id="rentFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Rent" />
+            <Label layoutX="-1.0" layoutY="10.0" text="Rent" />
+            <TextField fx:id="rentFxml" layoutX="45.0" layoutY="3.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Rent" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="110.0">
          <children>
-            <Label layoutY="4.0" text="Food:" />
-            <TextField fx:id="foodFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Food" />
+            <Label layoutX="-4.0" layoutY="10.0" text="Food:" />
+            <TextField fx:id="foodFxml" layoutX="43.0" layoutY="3.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Food" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="147.0">
@@ -44,14 +44,14 @@
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="249.0">
          <children>
-            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Debt:" />
+            <Label layoutY="4.0" prefHeight="21.0" prefWidth="37.0" text="Debt:" />
             <TextField fx:id="debtFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Debt" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="283.0">
          <children>
-            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Save:" />
-            <TextField fx:id="savingsFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Savings" />
+            <Label layoutY="4.0" prefHeight="21.0" prefWidth="49.0" text="Save:" />
+            <TextField fx:id="savingsFxml" layoutX="42.0" layoutY="-1.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Savings" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="142.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">

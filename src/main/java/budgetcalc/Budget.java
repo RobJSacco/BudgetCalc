@@ -1,16 +1,14 @@
 package budgetcalc;
 
-import java.sql.Savepoint;
-
 public class Budget {
-  static BudgetItem salaryItem = new BudgetItem();
-  static BudgetItem rentItem = new BudgetItem();
-  static BudgetItem foodItem = new BudgetItem();
-  static BudgetItem utilitiesItem = new BudgetItem();
-  static BudgetItem transportationItem = new BudgetItem();
-  static BudgetItem funItem = new BudgetItem();
-  static BudgetItem debtItem = new BudgetItem();
-  static BudgetItem savingsItem = new BudgetItem();
+  static BudgetItem salaryItem = new BudgetItem("Salary");
+  static BudgetItem rentItem = new BudgetItem("Rent");
+  static BudgetItem foodItem = new BudgetItem("Food");
+  static BudgetItem utilitiesItem = new BudgetItem("Util:");
+  static BudgetItem transportationItem = new BudgetItem("Car");
+  static BudgetItem funItem = new BudgetItem("Fun");
+  static BudgetItem debtItem = new BudgetItem("Debt");
+  static BudgetItem savingsItem = new BudgetItem("Save");
 
 
   /**

@@ -51,7 +51,7 @@ public class CalcGuiController {
     Double expenses = budgetNumbers[1];
     Double net = budgetNumbers[2];
     String incomeString = Calc.numericToFinancial(String.format("%3.0f", income) , false);
-    String expensesString = Calc.numericToFinancial(String.format("%3.2f", expenses) , false);
+    String expensesString = Calc.numericToFinancial(String.format("%3.0f", expenses) , false);
     String netString = Calc.numericToFinancial(String.format("%3.2f", net) , true);
     incomeFxml.setText(incomeString);
     expensesFxml.setText(expensesString);

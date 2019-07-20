@@ -6,11 +6,7 @@ public class Calc {
 
 
   private static double yearlySalary = 0;  
-  private static BudgetItem rent = new BudgetItem();
-  private static BudgetItem food = new BudgetItem();
-  private static BudgetItem utilities = new BudgetItem();
-  private static BudgetItem transportaton = new BudgetItem();
-  private static BudgetItem fun = new BudgetItem();
+
 
   //number of that variable in a year
   private static final int biWeeksPerYear = 26;
@@ -42,7 +38,6 @@ public class Calc {
     if (withCents) {
       decLen = 2;
     } 
-
     for (int i = 0; i < numeric.length(); i++) {   
       if (withCents) {
         if ((i == numeric.length() - decLen) && numeric.length() > decLen) {
@@ -50,12 +45,10 @@ public class Calc {
         }        
       }
 
-      if  (((numeric.length() - decLen - i) % 3 == 0) && i != numeric.length() - decLen && i != 0) {
-        
+      if  (((numeric.length() - decLen - i) % 3 == 0) && i != numeric.length() - decLen && i != 0) {       
         financialString = financialString.concat(",");
       }
       financialString = financialString.concat(numeric.substring(i, i + 1));
-
     }
     return financialString;
   }

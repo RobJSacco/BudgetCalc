@@ -9,7 +9,12 @@ public class BudgetItem {
   private final int weeksPerYear = 52;
   private final int monthsPerYear = 12;
   private final int biWeeksPerYear = 26;
-
+  
+  private String name;
+  
+  BudgetItem(String name){
+    this.name = name;
+  }
   public void setExpense(double Expense) {    
     this.yearlyExpense = Expense;     
   }
