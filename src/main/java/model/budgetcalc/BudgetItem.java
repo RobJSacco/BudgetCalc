@@ -1,4 +1,4 @@
-package budgetcalc;
+package model.budgetcalc;
 
 public class BudgetItem {
   private double yearlyExpense = 0;

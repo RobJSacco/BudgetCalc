@@ -10,9 +10,10 @@ import javafx.stage.Stage;
 public class CalcLauncher extends Application {
   @Override
   public void start(Stage stage) throws Exception {
-    Parent root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/view/GuiAccordion.fxml"));
+    //Parent root = FXMLLoader.load(getClass().getResource("/view/GUI.fxml"));
     
-    Scene scene = new Scene(root, 375, 375);
+    Scene scene = new Scene(root, 600, 470);
 
     stage.setTitle("BudgetCalculator");
     stage.setScene(scene);

@@ -1,4 +1,4 @@
-package budgetcalc;
+package model.budgetcalc;
 
 public class Budget {
   static BudgetItem salaryItem = new BudgetItem("Salary");

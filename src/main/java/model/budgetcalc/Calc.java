@@ -1,4 +1,4 @@
-package budgetcalc;
+package model.budgetcalc;
 
 import org.apache.commons.lang3.StringUtils;
 
