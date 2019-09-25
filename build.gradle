@@ -5,7 +5,18 @@
  * For more details take a look at the Java Libraries chapter in the Gradle
  * user guide available at https://docs.gradle.org/5.0/userguide/java_library_plugin.html
  */
+ buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+    dependencies {
+    classpath "com.github.jengelman.gradle.plugins:shadow:5.1.0"
+  }
+}
 
+  
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
@@ -13,14 +24,24 @@ plugins {
     id 'application'
     id 'java'
 }
-
+apply plugin: "com.github.johnrengelman.shadow"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+jar{
+    manifest{
+        attributes 'Main-Class': 'application.Main'
+    }
+}
+
+application {
+    mainClassName = 'application.Main'
+}
 
 //create a single Jar with all dependencies
 task fatJar(type: Jar) {
 	manifest {
-        attributes 'Main-Class': 'application.CalcLauncher'
+        attributes 'Main-Class': 'application.Main'
     }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
@@ -32,6 +53,7 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     mavenCentral()
+ 
 }
 
 dependencies {
