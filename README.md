@@ -15,7 +15,7 @@ Project is created with:
 To run this project, install it locally using gradle:
 
 ```
-$ ./gradlew build
+$ ./gradlew fatjar
 $ cd build/libs/
-$ java -jar BudgetCalc.jar
+$ java -jar BudgetCalc-all.jar
 ```
