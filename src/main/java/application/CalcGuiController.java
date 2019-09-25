@@ -1,12 +1,9 @@
 package application;
 
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 import model.budgetcalc.Budget;
 import model.budgetcalc.Calc;
 
@@ -25,19 +22,12 @@ public class CalcGuiController {
   @FXML private Label expensesFxml;
   @FXML private Label netFxml;
   
-  public static void setPrimaryStage(Stage stage, Parent root) {
-    
-    Scene scene = new Scene(root, 600, 400);
-
-    stage.setTitle("BudgetCalculator");
-    stage.setScene(scene);
-    stage.show();
-  }
 
   @FXML protected void handleFinance(KeyEvent evt) {
     TextField source = (TextField) evt.getSource();
     final int loc = source.getCaretPosition();
     String string = source.getText();
+    System.out.println();
     if ((evt.getCode().isModifierKey()) || evt.getCode().isNavigationKey()) {
       return;
     }    

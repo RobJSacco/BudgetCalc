@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane fx:controller="application.CalcGuiController"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <Accordion maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="293.0" BorderPane.alignment="CENTER">
         <panes>
@@ -16,10 +16,10 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="598.0">
                      <children>
-                        <Label layoutX="34.0" layoutY="20.0" text="Primary Salary:" />
-                        <Label layoutX="34.0" layoutY="60.0" text="Secondary Salary:" />
+                        <Label layoutX="34.0" layoutY="20.0" text="Primary expense:" />
+                        <Label layoutX="34.0" layoutY="60.0" text="Secondary expense:" />
                         <Label layoutX="34.0" layoutY="100.0" prefHeight="21.0" prefWidth="111.0" text="Other Income:" />
-                        <TextField fx:id="salary1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="Salary1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
                         <TextField fx:id="Salary2" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
                         <TextField fx:id="Salary3" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
                      </children>

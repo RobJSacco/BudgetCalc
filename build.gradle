@@ -27,8 +27,6 @@ task fatJar(type: Jar) {
     with jar
 }
 
-
-
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
