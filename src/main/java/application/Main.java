@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
   @Override
   public void start(Stage stage) throws Exception {
-    Parent root = FXMLLoader.load(getClass().getResource("/view/GuiAccordion.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/fxml/GUI.fxml"));
     //Parent root = FXMLLoader.load(getClass().getResource("/view/GUI.fxml"));
     
     Scene scene = new Scene(root, 600, 470);
