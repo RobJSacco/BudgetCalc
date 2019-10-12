@@ -10,10 +10,10 @@ import javafx.stage.Stage;
 public class Main extends Application {
   @Override
   public void start(Stage stage) throws Exception {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/Gui.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/fxml/GuiAccordion.fxml"));
     //Parent root = FXMLLoader.load(getClass().getResource("/fxml/GUI.fxml"));
     
-    Scene scene = new Scene(root, 600, 470);
+    Scene scene = new Scene(root, 600, 570);
 
     stage.setTitle("BudgetCalculator");
     stage.setScene(scene);

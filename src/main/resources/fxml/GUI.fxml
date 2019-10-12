@@ -6,7 +6,7 @@
 <?import application.controller.items.Salary?>
 
 
-<AnchorPane prefHeight="362.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalcGuiController">
+<AnchorPane prefHeight="362.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalcGuiController">
    <children>
       <AnchorPane id="Salary" layoutX="14.0" layoutY="20.0" prefHeight="38.0" prefWidth="177.0">
          <children>
@@ -61,19 +61,19 @@
             <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0">
                <children>
                   <Label alignment="CENTER_RIGHT" layoutY="4.0" prefHeight="17.0" prefWidth="75.0" text="Income:" textAlignment="RIGHT" />
-                  <Label fx:id="incomeFxml" layoutX="93.0" />
+                  <Label fx:id="totalIncome" layoutX="93.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="200.0">
                <children>
                   <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Expenses:" />
-                  <Label fx:id="expensesFxml" layoutX="93.0" />
+                  <Label fx:id="totalExpense" layoutX="93.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="10.0" layoutY="64.0" prefHeight="25.0" prefWidth="200.0">
                <children>
                   <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Net :" textAlignment="RIGHT" />
-                  <Label fx:id="netFxml" layoutX="93.0" />
+                  <Label fx:id="net" layoutX="93.0" />
                </children>
             </AnchorPane>
          </children>

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="application.controller.AccordionGuiController" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <Accordion maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="293.0" BorderPane.alignment="CENTER">
         <panes>
@@ -19,9 +19,9 @@
                         <Label layoutX="34.0" layoutY="20.0" text="Primary expense:" />
                         <Label layoutX="34.0" layoutY="60.0" text="Secondary expense:" />
                         <Label layoutX="34.0" layoutY="100.0" prefHeight="21.0" prefWidth="111.0" text="Other Income:" />
-                        <TextField fx:id="Salary1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="Salary2" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="Salary3" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="salary1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="salary2" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="salary3" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
             </content>
@@ -34,10 +34,10 @@
                         <Label layoutX="32.0" layoutY="60.0" prefHeight="21.0" prefWidth="183.0" text="House/Rental Insurance:" />
                         <Label layoutX="32.0" layoutY="100.0" prefHeight="21.0" prefWidth="148.0" text="HOA:" />
                         <Label layoutX="32.0" layoutY="140.0" prefHeight="21.0" prefWidth="148.0" text="Home Repairs:" />                  
-                        <TextField fx:id="expense1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense2" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />             
-                        <TextField fx:id="expense3" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense4" layoutX="207.0" layoutY="140.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense2" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />             
+                        <TextField fx:id="expense3" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense4" layoutX="207.0" layoutY="140.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
             </content>
@@ -50,10 +50,10 @@
                         <Label layoutX="32.0" layoutY="60.0" prefHeight="21.0" prefWidth="183.0" text="Water:" />
                         <Label layoutX="32.0" layoutY="100.0" prefHeight="21.0" prefWidth="148.0" text="Phone:" />
                         <Label layoutX="32.0" layoutY="140.0" prefHeight="21.0" prefWidth="148.0" text="Cable &amp; Internet:" />
-                        <TextField fx:id="expense5" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense6" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />             
-                        <TextField fx:id="expense7" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense8" layoutX="207.0" layoutY="140.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense5" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense6" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />             
+                        <TextField fx:id="expense7" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense8" layoutX="207.0" layoutY="140.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                       </children>
                   </AnchorPane>
             </content>
@@ -67,11 +67,11 @@
                         <Label layoutX="32.0" layoutY="100.0" prefHeight="21.0" prefWidth="167.0" text="Monthly Car Insurance:" />
                         <Label layoutX="32.0" layoutY="140.0" prefHeight="21.0" prefWidth="167.0" text="Gasoline:" />
                         <Label layoutX="32.0" layoutY="180.0" prefHeight="21.0" prefWidth="167.0" text="Car Maintenance:" />
-                        <TextField fx:id="expense9" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense10" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense11" layoutX="218.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense12" layoutX="218.0" layoutY="140.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense13" layoutX="218.0" layoutY="180" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense9" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense10" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense11" layoutX="218.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense12" layoutX="218.0" layoutY="140.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense13" layoutX="218.0" layoutY="180" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
             </content>
@@ -82,8 +82,8 @@
                      <children>
                         <Label layoutX="32.0" layoutY="20.0" text="Groceries:" />
                         <Label layoutX="32.0" layoutY="60.0" text="Meals out:" />
-                        <TextField fx:id="expense14" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense15" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense14" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense15" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
               </content>
@@ -93,7 +93,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="32.0" layoutY="20.0" text="Child Care:" />
-                        <TextField fx:id="expense16" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense16" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
               </content>
@@ -105,9 +105,9 @@
                         <Label layoutX="32.0" layoutY="20.0" text="Credit Cards:" />
                         <Label layoutX="32.0" layoutY="60.0" text="Medical Debt:" />
                         <Label layoutX="32.0" layoutY="100.0" text="Student Loans:" />
-                        <TextField fx:id="expense17" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense18" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense19" layoutX="218.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense17" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense18" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense19" layoutX="218.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
                </content>
@@ -119,9 +119,9 @@
                         <Label layoutX="32.0" layoutY="20.0" text="Hobbies:" />
                         <Label layoutX="32.0" layoutY="60.0" text="Travel Fund:" />
                         <Label layoutX="32.0" layoutY="100.0" text="Holiday Savings:" />
-                        <TextField fx:id="expense20" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense21" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
-                        <TextField fx:id="expense22" layoutX="218.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" />
+                        <TextField fx:id="expense20" layoutX="218.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense21" layoutX="218.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
+                        <TextField fx:id="expense22" layoutX="218.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                      </children>
                   </AnchorPane>
                </content>
@@ -130,10 +130,26 @@
       </Accordion>
    </left>
    <center>
-      <AnchorPane prefHeight="500.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+           <AnchorPane layoutX="142.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label layoutX="39.0" layoutY="111.0" text="Total Salary:" />
-            <Label layoutX="39.0" layoutY="140.0" text="Total Expenses:" />
+            <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutY="4.0" prefHeight="17.0" prefWidth="75.0" text="Income:" textAlignment="RIGHT" />
+                  <Label fx:id="totalIncome" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Expenses:" />
+                  <Label fx:id="totalExpense" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="64.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Net :" textAlignment="RIGHT" />
+                  <Label fx:id="net" layoutX="93.0" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </center>

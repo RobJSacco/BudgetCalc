@@ -22,10 +22,15 @@ public class Calc {
    * @return
    */
   public static String numericToFinancial(String string, Boolean withCents) {
+    boolean isNegative = false;
     //FIXME unexpected results when withCents = true
     //Seems to multiply by 12 instead of divide by 12.
     String numeric = "";
     for (int i = 0; i < string.length(); i++) {
+      if (string.startsWith("-") & i==0) {
+        isNegative = true;
+      }
+      
       if (StringUtils.isNumeric(string.substring(i,i + 1))) {
         numeric = numeric.concat(string.substring(i,i + 1));
       }
@@ -49,6 +54,10 @@ public class Calc {
         financialString = financialString.concat(",");
       }
       financialString = financialString.concat(numeric.substring(i, i + 1));
+    }
+    if (isNegative) {
+      String neg = "-";
+      return neg.concat(financialString);
     }
     return financialString;
   }
