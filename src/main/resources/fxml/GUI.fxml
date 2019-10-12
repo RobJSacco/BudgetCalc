@@ -3,12 +3,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import application.controller.items.Salary?>
 
-<AnchorPane prefHeight="362.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalcGuiController">
+
+<AnchorPane prefHeight="362.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalcGuiController">
    <children>
       <AnchorPane id="Salary" layoutX="14.0" layoutY="20.0" prefHeight="38.0" prefWidth="177.0">
          <children>
-            <TextField fx:id="salaryFxml" layoutX="49.0" layoutY="2.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="68.0" promptText="Salary" />
+            <Salary fx:id="salaryFxml" layoutX="49.0" layoutY="2.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="68.0" promptText="Salary" />
          	  <Label layoutY="6.0" prefHeight="17.0" prefWidth="49.0" text="Salary:" />
          </children>
       </AnchorPane>
