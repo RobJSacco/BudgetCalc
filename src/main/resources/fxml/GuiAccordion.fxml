@@ -19,7 +19,7 @@
                         <Label layoutX="34.0" layoutY="20.0" text="Primary Income:" />
                         <Label layoutX="34.0" layoutY="60.0" text="Secondary Income:" />
                         <Label layoutX="34.0" layoutY="100.0" prefHeight="21.0" prefWidth="111.0" text="Other Income:" />
-                        <Label layoutX="34.0" layoutY="140.0" prefHeight="21.0" prefWidth="111.0" text="Income Tax Bracket:" />
+                        <Label layoutX="34.0" layoutY="140.0" prefHeight="21.0" prefWidth="140.0" text="Income Tax Bracket:" />
                         <TextField fx:id="salary1" layoutX="207.0" layoutY="20.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                         <TextField fx:id="salary2" layoutX="207.0" layoutY="60.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />
                         <TextField fx:id="salary3" layoutX="207.0" layoutY="100.0" prefHeight="21.0" prefWidth="50.0" promptText="\$0" onKeyReleased="#handleFinance" />

@@ -12,7 +12,6 @@ public class Budget {
     totalExpenses = NumberUtils.sum(Expenses);
     net = totalIncome - totalExpenses;
     //TODO flag high percentage budget Items
-    //TODO Allow the user to select how frequently the expense occurs (expense per year/month etc.
   }
   
   public Double getIncome() {
