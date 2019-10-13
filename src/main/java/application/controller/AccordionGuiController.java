@@ -2,6 +2,8 @@ package application.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import model.budgetcalc.Calc;
 
 public class AccordionGuiController extends ControllerAbstract {  
 
@@ -31,6 +33,23 @@ public class AccordionGuiController extends ControllerAbstract {
   @FXML private TextField expense21;
   @FXML private TextField expense22;
 
+  
+  @FXML protected void handleTaxes(KeyEvent evt) {
+    TextField source = (TextField) evt.getSource();
+    final int loc = source.getCaretPosition();
+    String string = source.getText();
+    if ((evt.getCode().isModifierKey()) || evt.getCode().isNavigationKey() || evt.getCode() == evt.getCode().BACK_SPACE) {
+      return;
+    }    
+    String percentage = Calc.numericToPercentage(string, false);
+    source.setText(percentage);
+    
+    source.positionCaret(loc + percentage.length() - string.length());
+    super.setTaxes(percentage);
+    refreshBudget();
+
+  }
+  
   protected void refreshFields() {
 
     TextField[] expenseFields = {

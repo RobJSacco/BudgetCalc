@@ -63,6 +63,69 @@ public class Calc {
   }
   
   /**
+   * Converts a string of numbers into financial standard. From 123456 to $1,234.56
+   * @param string the string entered by the user
+   * @param withCents true includes cents in the calculation
+   * @return
+   */
+  public static String numericToPercentage(String string, Boolean withCents) {
+    boolean isNegative = false;
+    //FIXME unexpected results when withCents = true
+    //Seems to multiply by 12 instead of divide by 12.
+    String numeric = "";
+    for (int i = 0; i < string.length(); i++) {
+      if (string.startsWith("-") & i==0) {
+        isNegative = true;
+      }
+      
+      if (StringUtils.isNumeric(string.substring(i,i + 1))) {
+        numeric = numeric.concat(string.substring(i,i + 1));
+      }
+    }
+    numeric = numeric.replace(".", "");
+    numeric = numeric.replace(",", "");
+    String PercentageString = ""; 
+
+    int decLen = 0;
+    if (withCents) {
+      decLen = 2;
+    } 
+    for (int i = 0; i < numeric.length(); i++) {   
+      if (withCents) {
+        if ((i == numeric.length() - decLen) && numeric.length() > decLen) {
+          PercentageString = PercentageString.concat(".");                    
+        }        
+      }
+
+      if  (((numeric.length() - decLen - i) % 3 == 0) && i != numeric.length() - decLen && i != 0) {       
+        PercentageString = PercentageString.concat(",");
+      }
+      PercentageString = PercentageString.concat(numeric.substring(i, i + 1));
+    }
+    if (isNegative) {
+      String neg = "-";
+      return neg.concat(PercentageString);
+    }
+    return PercentageString.concat("%");
+  }
+  
+  /**
+   * Converts financial standard string into a double. $1,234.56 to 1234.56
+   * @param financialString the string in financial standard
+   * @return
+   */
+  public static double percentageToDouble(String percentageString) {
+    double numeric = 0;
+    String numericString = percentageString.replace("%", "").replace(",", "");
+    
+    if (StringUtils.isNumeric(numericString)) {
+      numeric = Double.valueOf(numericString);         
+      numeric = numeric / 100;
+    }    
+    return numeric;    
+  }
+  
+  /**
    * Converts financial standard string into a double. $1,234.56 to 1234.56
    * @param financialString the string in financial standard
    * @return
@@ -82,7 +145,6 @@ public class Calc {
   }
 
   public static void setYearlySalary(double yearlySalary) {
-    //TODO Add support for take home/taxable income
     Calc.yearlySalary = yearlySalary;
   }
 
