@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="362.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalcGuiController">
+   <children>
+      <AnchorPane id="Salary" layoutX="14.0" layoutY="20.0" prefHeight="38.0" prefWidth="177.0">
+         <children>
+            <TextField fx:id="salaryFxml" layoutX="49.0" layoutY="2.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="68.0" promptText="Salary" />
+         	  <Label layoutY="6.0" prefHeight="17.0" prefWidth="49.0" text="Salary:" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="76.0">
+         <children>      
+            <Label layoutX="-1.0" layoutY="10.0" text="Rent" />
+            <TextField fx:id="rentFxml" layoutX="45.0" layoutY="3.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Rent" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="110.0">
+         <children>
+            <Label layoutX="-4.0" layoutY="10.0" text="Food:" />
+            <TextField fx:id="foodFxml" layoutX="43.0" layoutY="3.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Food" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="147.0">
+         <children>
+            <Label layoutY="4.0" text="Utils:" />
+            <TextField fx:id="utilsFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Utilities" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="181.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Car:" />
+            <TextField fx:id="transportFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Transport" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="215.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="30.0" text="Fun:" />
+            <TextField fx:id="funFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Fun" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="249.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="21.0" prefWidth="37.0" text="Debt:" />
+            <TextField fx:id="debtFxml" layoutX="43.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Debt" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="283.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="21.0" prefWidth="49.0" text="Save:" />
+            <TextField fx:id="savingsFxml" layoutX="42.0" layoutY="-1.0" onKeyReleased="#handleFinance" prefHeight="25.0" prefWidth="75.0" promptText="Savings" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="142.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutY="4.0" prefHeight="17.0" prefWidth="75.0" text="Income:" textAlignment="RIGHT" />
+                  <Label fx:id="incomeFxml" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Expenses:" />
+                  <Label fx:id="expensesFxml" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="64.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="75.0" text="Net :" textAlignment="RIGHT" />
+                  <Label fx:id="netFxml" layoutX="93.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
